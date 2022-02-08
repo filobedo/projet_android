@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_menu"
+    app:startDestination="@id/home_classment">
+
+    <fragment
+        android:id="@+id/home_classment"
+        android:name="com.flaceliere_lemaire.projet_android.view.HomepageClassment"
+        android:label="home_classment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/home_search"
+        android:name="com.flaceliere_lemaire.projet_android.view.homepageSearch"
+        android:label="home_search">
+    </fragment>
+
+    <fragment
+        android:id="@+id/home_favorite"
+        android:name="com.flaceliere_lemaire.projet_android.view.homepageFavorite"
+        android:label="home_favorite">
+    </fragment>
+
+</navigation>
