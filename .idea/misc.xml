@@ -5,10 +5,12 @@
       <map>
         <entry key="../../../../../../../layout/custom_preview.xml" value="0.3645833333333333" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.4203125" />
+        <entry key="app/src/main/res/drawable/bottom_test_border.xml" value="0.7984375" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.4203125" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22685185185185186" />
         <entry key="app/src/main/res/layout/album_recycler.xml" value="0.3494791666666667" />
-        <entry key="app/src/main/res/layout/homepage_classment.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/artist_fragment.xml" value="0.7822916666666667" />
+        <entry key="app/src/main/res/layout/homepage_classment.xml" value="0.67" />
         <entry key="app/src/main/res/layout/homepage_favorite.xml" value="0.3494791666666667" />
         <entry key="app/src/main/res/layout/homepage_fragment.xml" value="0.3494791666666667" />
         <entry key="app/src/main/res/layout/homepage_search.xml" value="0.3494791666666667" />

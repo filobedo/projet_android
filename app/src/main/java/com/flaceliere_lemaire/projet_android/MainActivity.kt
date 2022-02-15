@@ -14,6 +14,8 @@ import com.flaceliere_lemaire.projet_android.model.ArtistModel
 import com.flaceliere_lemaire.projet_android.service.AlbumService
 import com.flaceliere_lemaire.projet_android.view.HomepageClassment
 import com.flaceliere_lemaire.projet_android.view.homepageFragment
+import com.google.android.material.tabs.TabLayout
+import kotlinx.android.synthetic.main.homepage_classment.*
 import kotlinx.android.synthetic.main.homepage_fragment.*
 
 import retrofit2.Call
@@ -33,7 +35,6 @@ class MainActivity : AppCompatActivity() {
 //        ButterKnife.bind(this)
 
         val recyclerview = findViewById<RecyclerView>(R.id.listAlbum)
-        println("icii")
         recyclerview.layoutManager = LinearLayoutManager(this)
 
 
@@ -44,13 +45,6 @@ class MainActivity : AppCompatActivity() {
             override fun onResponse(call: Call<AlbumsModel>, response: Response<AlbumsModel>) {
                 if (response.body() != null) {
                     println(response.body()!!.album[0].strAlbum) //response.body()!!
-//                    textInput.text = response.body()!!.album[0].strAlbum
-//                    recyclerAdapter.setMovieListItems(response.body()!!)
-//                    for (c in allCourse) {
-//                        println(" one course : ${c.artists[0]}")
-//                        textInput.text = c.artists[0].toString()
-//                    }
-
 
                     // ArrayList of class ItemsViewModel
                     val data = ArrayList<Album>()
@@ -80,6 +74,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+
+
 
 
 //        val textInput: TextView = findViewById<TextView>(R.id.textTemp)
