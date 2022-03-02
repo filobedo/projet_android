@@ -9,9 +9,37 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Page de recherche"
+        android:text="Rechercher"
+        android:id="@+id/rechercherTitle"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"   />
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/rechercherTitle"
+        android:queryHint="Rechercher"
+        android:iconifiedByDefault="false"
+        android:layout_alignParentTop="true"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Artistes"
+        app:layout_constraintTop_toBottomOf="@id/searchView"
+        android:id="@+id/artisteTitle"></TextView>
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/artisteTitle"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        >-->
+
+<!--    </androidx.recyclerview.widget.RecyclerView>-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

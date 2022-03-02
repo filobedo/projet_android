@@ -2,15 +2,12 @@ package com.flaceliere_lemaire.projet_android.model
 
 import com.google.gson.annotations.SerializedName
 
-data class ArtistModel (
-    @SerializedName("artists") val artists: List<Artist>,
+data class ArtistsDAO (
+    @SerializedName("artists") val artists: List<ArtistDAO>,
 //    val title: String
-    ) {
+) {}
 
-}
-
-
-data class Artist (
+data class ArtistDAO (
     @SerializedName("idArtist")
     val idArtist: String? = null,
 
@@ -91,7 +88,7 @@ data class Artist (
 
     @SerializedName("strBiographyNO")
     val strBiographyNO: String? = null,
-    
+
     @SerializedName("strBiographyIL")
     val strBiographyIL: String? = null,
 
@@ -118,7 +115,7 @@ data class Artist (
 
     @SerializedName("strArtistClearart")
     val strArtistClearart: String? = null,
-    
+
     @SerializedName("strArtistWideThumb")
     val strArtistWideThumb: String? = null,
 
@@ -152,3 +149,4 @@ data class Artist (
     @SerializedName("strLocked")
     val strLocked: String? = null,
 )
+

@@ -2,13 +2,13 @@ package com.flaceliere_lemaire.projet_android.model
 
 import com.google.gson.annotations.SerializedName
 
-data class AlbumsModel(
+data class AlbumsDAO(
     @SerializedName("album")
-    val album: List<Album>
+    val album: List<AlbumDAO>
 ) {}
 
 
-data class Album(
+data class AlbumDAO(
     @SerializedName("idAlbum")
     val idAlbum: String? = null,
 

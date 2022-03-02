@@ -2,25 +2,9 @@ package com.flaceliere_lemaire.projet_android
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.flaceliere_lemaire.projet_android.controller.AlbumController
-import com.flaceliere_lemaire.projet_android.model.Album
-import com.flaceliere_lemaire.projet_android.model.AlbumsModel
-import com.flaceliere_lemaire.projet_android.service.ArtistService
-import com.flaceliere_lemaire.projet_android.model.ArtistModel
-import com.flaceliere_lemaire.projet_android.service.AlbumService
-import com.flaceliere_lemaire.projet_android.view.HomepageClassment
 import com.flaceliere_lemaire.projet_android.view.homepageFragment
-import com.google.android.material.tabs.TabLayout
-import kotlinx.android.synthetic.main.homepage_classment.*
-import kotlinx.android.synthetic.main.homepage_fragment.*
-
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 
 class MainActivity : AppCompatActivity() {
@@ -38,36 +22,36 @@ class MainActivity : AppCompatActivity() {
         recyclerview.layoutManager = LinearLayoutManager(this)
 
 
-        val albumsRequest = AlbumService.create().getAlbum()
-        println(albumsRequest.request().url)
-        albumsRequest.enqueue(object : Callback<AlbumsModel> {
-
-            override fun onResponse(call: Call<AlbumsModel>, response: Response<AlbumsModel>) {
-                if (response.body() != null) {
-                    println(response.body()!!.album[0].strAlbum) //response.body()!!
-
-                    // ArrayList of class ItemsViewModel
-                    val data = ArrayList<Album>()
-                    for (value in response.body()!!.album) {
-                        data.add(value)
-                        println("------- dans boucle ${data[0].strAlbum}")
-                    }
-
-                    // This will pass the ArrayList to our Adapter
-                    val adapter = AlbumController(data)
-
-                    // Setting the Adapter with the recyclerview
-                    recyclerview.adapter = adapter
-
-
-                }
-            }
-
-            override fun onFailure(call: Call<AlbumsModel>, t: Throwable) {
-                println("KO ${t.cause}")
-                error("KO")
-            }
-        })
+//        val albumsRequest = AlbumService.create().getAlbum()
+//        println(albumsRequest.request().url)
+//        albumsRequest.enqueue(object : Callback<AlbumsModel> {
+//
+//            override fun onResponse(call: Call<AlbumsModel>, response: Response<AlbumsModel>) {
+//                if (response.body() != null) {
+//                    println(response.body()!!.album[0].strAlbum) //response.body()!!
+//
+//                    // ArrayList of class ItemsViewModel
+//                    val data = ArrayList<Album>()
+//                    for (value in response.body()!!.album) {
+//                        data.add(value)
+//                        println("------- dans boucle ${data[0].strAlbum}")
+//                    }
+//
+//                    // This will pass the ArrayList to our Adapter
+//                    val adapter = AlbumController(data)
+//
+//                    // Setting the Adapter with the recyclerview
+//                    recyclerview.adapter = adapter
+//
+//
+//                }
+//            }
+//
+//            override fun onFailure(call: Call<AlbumsModel>, t: Throwable) {
+//                println("KO ${t.cause}")
+//                error("KO")
+//            }
+//        })
 
 
     }

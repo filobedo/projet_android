@@ -8,9 +8,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.flaceliere_lemaire.projet_android.R
-import com.flaceliere_lemaire.projet_android.model.Album
+import com.flaceliere_lemaire.projet_android.model.AlbumDAO
 
-class AlbumController(private val mList: List<Album>, myContext: Context) : RecyclerView.Adapter<AlbumController.ViewHolder>() {
+class AlbumController(private val mList: List<AlbumDAO>, myContext: Context) : RecyclerView.Adapter<AlbumController.ViewHolder>() {
     // create new views
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         // inflates the card_view_design view

@@ -6,6 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.flaceliere_lemaire.projet_android.R
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import android.util.Log
+import com.flaceliere_lemaire.projet_android.artist.ArtistService
+import java.lang.Exception
 
 class homepageSearch : Fragment() {
     override fun onCreateView(
@@ -22,6 +27,16 @@ class homepageSearch : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+            var artistService = ArtistService();
+            GlobalScope.launch {
+                try {
+                    Log.d("OK", artistService.getArtistsByName("coldplay").toString())
+                }catch (e: Exception){
+                    Log.d("DEBUG", e.toString())
+                }
+            }
+
 
     }
 
