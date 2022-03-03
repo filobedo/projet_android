@@ -1,45 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_search"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/home_search"
     android:background="@color/white">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Rechercher"
-        android:id="@+id/rechercherTitle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"   />
 
     <SearchView
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/rechercherTitle"
-        android:queryHint="Rechercher"
-        android:iconifiedByDefault="false"
         android:layout_alignParentTop="true"
-        />
-
+        android:iconifiedByDefault="false"
+        android:queryHint="@string/search"
+        app:layout_constraintTop_toBottomOf="@+id/rechercherTitle" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/rechercherTitle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Artistes"
-        app:layout_constraintTop_toBottomOf="@id/searchView"
-        android:id="@+id/artisteTitle"></TextView>
+        android:text="@string/search"
+        android:textColor="@color/black"
+        android:textSize="@dimen/h1"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/search_left_margin"
+        app:layout_constraintTop_toTopOf="parent" />
 
-<!--    <androidx.recyclerview.widget.RecyclerView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/artisteTitle"-->
-<!--        app:layout_constraintLeft_toLeftOf="parent"-->
-<!--        >-->
 
-<!--    </androidx.recyclerview.widget.RecyclerView>-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintHorizontal_bias="0"
+        android:id="@+id/artist_album_recycler"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/search_left_margin"
+        app:layout_constraintRight_toLeftOf="@id/search_right_margin"
+        app:layout_constraintTop_toBottomOf="@+id/searchView">
+
+
+        <TextView
+            android:id="@+id/artisteTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Artistes"
+            android:textColor="@color/black"
+            android:textSize="@dimen/h2"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/artist_album_recycler"></TextView>
+
+        <TextView
+            android:id="@+id/albumTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/album"
+            android:textColor="@color/black"
+            android:textSize="@dimen/h2"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/artist_album_separator"></TextView>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/artist_album_separator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5"></androidx.constraintlayout.widget.Guideline>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/artiste_recycler_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/artist_album_separator"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/artisteTitle">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/album_recycler_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/albumTitle">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/search_right_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp">
+        "></androidx.constraintlayout.widget.Guideline>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/search_left_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp"></androidx.constraintlayout.widget.Guideline>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

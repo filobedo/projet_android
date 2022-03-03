@@ -16,7 +16,7 @@ class AlbumService {
         albumTheAudioDBAPI = TheAudioDBAPI.getInstance().create(AlbumTheAudioDBAPI::class.java)
     }
 
-    suspend fun getArtistsByName(artistName: String): AlbumsDAO?{
+    suspend fun getAlbumByArtistsByName(artistName: String): AlbumsDAO?{
         var albums: AlbumsDAO
         try {
             albums = withContext(Dispatchers.IO){

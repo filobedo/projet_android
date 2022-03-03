@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="colorPrimaryDark">#FF000000</color>
     <color name="subtitle_separator">#3DBF18</color>
+    <color name="silver">#E6E6E6</color>
 </resources>
