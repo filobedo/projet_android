@@ -10,6 +10,7 @@ class ArtistsIntoCard {
 
                 for (artist in artists.artists){
                     var artistCardModel = ArtistCardModel()
+                    artistCardModel.id = artist.idArtist
                     artistCardModel.name = artist.strArtist
                     artistCardModel.imgUrl = artist.strArtistThumb
 
