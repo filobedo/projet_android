@@ -21,8 +21,8 @@ class TracksCardHolder(itemView:View): RecyclerView.ViewHolder(itemView) {
         currentTracks = track
         albumTextView.text = track.name
 
-//        if(track.imgUrl != null)
-//            Picasso.get().load(track.imgUrl).into(albumImageView)
+        if(track.imgUrl != null)
+            Picasso.get().load(track.imgUrl).into(albumImageView)
 
         albumCard.setOnClickListener(object: View.OnClickListener {
             override fun onClick(v: View?) {

@@ -33,6 +33,7 @@ class AlbumIntoCard {
                     var albumCardModel = AlbumCardModel()
                     albumCardModel.id = album.idAlbum
                     albumCardModel.name = album.strAlbum
+                    albumCardModel.imgUrl = album.strAlbumThumbHQ
 
                     albumsCard.add(albumCardModel)
                 }

@@ -32,6 +32,9 @@ public class LovedAlbumsDAO (
             @SerializedName("strTrack")
             val strTrack: String? = null,
 
+            @SerializedName("strAlbumThumbHQ")
+            val strAlbumThumbHQ: String? = null,
+
             @SerializedName("strArtist")
             val strArtist: String? = null,
 

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Projet_android</string>
+    <string name="app_name">Audio Recorder</string>
     <string name="album">Album</string>
     <string name="artist">Artiste</string>
     <string name="search">Rechercher</string>
+    <string name="favorite">favoris</string>
+    <string name="classment">classement</string>
+    <string name="artists">Artistes</string>
+    <string name="albums">Albums</string>
 </resources>

@@ -11,6 +11,7 @@ class TracksIntoCard {
                     var trackCardModel = TracksCardModel()
                     trackCardModel.id = track.idTrack
                     trackCardModel.name = track.strTrack
+                    trackCardModel.imgUrl = track.strTrackThumb
 
                     trackCard.add(trackCardModel)
                 }
