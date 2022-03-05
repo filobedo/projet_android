@@ -31,4 +31,20 @@ class AlbumService {
 
         return null
     }
+
+    suspend fun getTopAlbums(): LovedAlbumsDAO?{
+        var albums: LovedAlbumsDAO
+        try {
+            albums = withContext(Dispatchers.IO){
+                albumTheAudioDBAPI.getTopAlbums().await()
+            }
+
+            return albums
+        }
+        catch (e: Exception){
+            Log.d("DEBUG", e.toString())
+        }
+
+        return null
+    }
 }

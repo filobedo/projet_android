@@ -24,5 +24,23 @@ class AlbumIntoCard {
 
             return null
         }
+
+        fun convert (albums: LovedAlbumsDAO?): List<AlbumCardModel>?{
+            if (albums != null){
+                var albumsCard = ArrayList<AlbumCardModel>(0);
+
+                for (album in albums.album){
+                    var albumCardModel = AlbumCardModel()
+                    albumCardModel.id = album.idAlbum
+                    albumCardModel.name = album.strAlbum
+
+                    albumsCard.add(albumCardModel)
+                }
+
+                return albumsCard
+            }
+
+            return null
+        }
     }
 }

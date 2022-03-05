@@ -44,7 +44,7 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/listTitle"
+        android:id="@+id/listTracks"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:itemCount="5"
@@ -52,12 +52,14 @@
         />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/listAlbum"
+        android:id="@+id/listAlbums"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:itemCount="5"
         tools:listitem="@layout/album_recycler"
         android:visibility="gone"/>
+
+
 
 <!--    </LinearLayout>-->
 

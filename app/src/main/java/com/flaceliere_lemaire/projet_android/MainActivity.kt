@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
 //        ButterKnife.bind(this)
 
-        val recyclerview = findViewById<RecyclerView>(R.id.listAlbum)
+        val recyclerview = findViewById<RecyclerView>(R.id.listTracks)
         recyclerview.layoutManager = LinearLayoutManager(this)
 
 
