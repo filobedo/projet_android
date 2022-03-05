@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Projet_android</string>
+    <string name="album">Album</string>
+    <string name="artist">Artiste</string>
+    <string name="search">Rechercher</string>
+</resources>
