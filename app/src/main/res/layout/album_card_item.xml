@@ -5,7 +5,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginBottom="5dp">
 
-
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,6 +14,7 @@
         >
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/album_card"
             app:layout_constraintCircleRadius="25dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -28,29 +28,29 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:cardCornerRadius="25dp">
                 <ImageView
-                    android:id="@+id/artisteProfilePicture"
+                    android:id="@+id/albumProfilePicture"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toTopOf="@id/img_card_view"
                     android:maxHeight="50dp"
-                    android:src="@drawable/ic_placeholder_artiste"
+                    android:src="@drawable/ic_placeholder_album"
                     />
             </androidx.cardview.widget.CardView>
 
             <TextView
-                android:id="@+id/artistName"
+                android:id="@+id/albumName"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:textSize="@dimen/h2"
                 android:textColor="@color/black"
                 android:textStyle="bold"
 
-                android:text="Artist"
+                android:text="@string/album"
                 android:layout_marginStart="5dp"
                 app:layout_constraintLeft_toRightOf="@+id/img_card_view"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintRight_toLeftOf="@+id/ic_right_arrow"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
             </TextView>
 
@@ -77,9 +77,5 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
-
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
